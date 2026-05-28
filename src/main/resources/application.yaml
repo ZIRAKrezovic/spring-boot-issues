@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: demo
+  security:
+    oauth2:
+      client:
+        provider:
+          sso:
+            token-uri: http://localhost:8080/token
+        registration:
+          sso:
+            authorization-grant-type: client_credentials
+            client-authentication-method: client_secret_basic
+            client-id: test
+            client-secret: test
+            provider: sso
